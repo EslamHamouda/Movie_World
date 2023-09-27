@@ -3,6 +3,7 @@ package com.android.movieapp.di
 import com.android.movieapp.domain.repo.MoviesRepository
 import com.android.movieapp.domain.useCase.GetNowPlayingMoviesUseCase
 import com.android.movieapp.domain.useCase.GetPopularMoviesUseCase
+import com.android.movieapp.domain.useCase.GetSearchMoviesUseCase
 import com.android.movieapp.domain.useCase.GetTopRatedMoviesUseCase
 import com.android.movieapp.domain.useCase.GetTrendingMoviesUseCase
 import com.android.movieapp.domain.useCase.GetUpcomingMoviesUseCase
@@ -39,5 +40,10 @@ object UseCaseModule {
     @Singleton
     fun provideGetPopularMoviesUseCase(repository: MoviesRepository): GetPopularMoviesUseCase {
         return GetPopularMoviesUseCase(repository)
+    }
+    @Provides
+    @Singleton
+    fun provideGetSearchMoviesUseCase(repository: MoviesRepository): GetSearchMoviesUseCase {
+        return GetSearchMoviesUseCase(repository)
     }
 }

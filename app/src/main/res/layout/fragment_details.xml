@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#242A32"
+    tools:context=".presentation.details.ui.DetailsFragment">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_nav_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_nav_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="Detail"
+        android:textColor="#ECECEC"
+        android:textFontWeight="600"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_nav_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_nav_back" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_movie_background"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_background"
+            app:shapeAppearanceOverlay="@style/CustomImageViewRoundedBottom_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_nav_back"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="54dp"
+        android:layout_height="24dp"
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="#52252836"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_movie_background"
+        app:layout_constraintEnd_toEndOf="parent">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginVertical="4dp"
+            android:src="@drawable/ic_star"
+            android:layout_marginEnd="4dp"
+            android:layout_gravity="start|center"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_movie_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginVertical="4dp"
+            android:layout_gravity="end|center"
+            android:fontFamily="@font/montserrat"
+            android:letterSpacing="0.12"
+            android:textColor="#FF8700"
+            android:textFontWeight="600"
+            android:textSize="12sp"
+            tools:text="9.5" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_movie_foreground"
+        android:layout_width="95dp"
+        android:layout_height="120dp"
+        android:elevation="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="29dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_movie_background"
+        app:shapeAppearanceOverlay="@style/CustomImageViewRounded_16dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_movie_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        tools:text="What do you want to watch?"
+        android:textColor="@color/white"
+        android:textFontWeight="600"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_movie_foreground"
+        app:layout_constraintStart_toEndOf="@+id/iv_movie_foreground"
+        app:layout_constraintTop_toTopOf="@+id/iv_movie_foreground" />
+</androidx.constraintlayout.widget.ConstraintLayout>

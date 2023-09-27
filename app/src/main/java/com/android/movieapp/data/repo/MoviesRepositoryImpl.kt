@@ -7,6 +7,7 @@ import com.android.movieapp.data.mapper.TrendingMoviesDomainMapper
 import com.android.movieapp.data.service.MoviesService
 import com.android.movieapp.domain.model.NowPlayingMovieDomainModel
 import com.android.movieapp.domain.model.PopularMovieDomainModel
+import com.android.movieapp.domain.model.SearchMovieDomainModel
 import com.android.movieapp.domain.model.TopRatedMovieDomainModel
 import com.android.movieapp.domain.model.TrendingMovieDomainModel
 import com.android.movieapp.domain.model.UpcomingMovieDomainModel
@@ -67,6 +68,18 @@ class MoviesRepositoryImpl(private val service: MoviesService) : MoviesRepositor
             ),
             pagingSourceFactory = {
                 UpcomingMoviesPagingSource(service)
+            }, initialKey = 1
+        ).flow
+
+    override suspend fun searchMovies(searchKey: String) =
+        Pager(
+            config = PagingConfig(
+                pageSize = 20,
+                enablePlaceholders = false,
+                initialLoadSize = 50
+            ),
+            pagingSourceFactory = {
+                SearchMoviesPagingSource(service, searchKey)
             }, initialKey = 1
         ).flow
 }

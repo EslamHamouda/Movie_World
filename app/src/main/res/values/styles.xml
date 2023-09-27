@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--<style name="Widget.Material3.BottomNavigationView.ActiveIndicator" parent="">
+    <item name="android:width">@dimen/m3_bottom_nav_item_active_indicator_width</item>
+    <item name="android:height">@dimen/m3_bottom_nav_item_active_indicator_height</item>
+    <item name="marginHorizontal">@dimen/m3_bottom_nav_item_active_indicator_margin_horizontal</item>
+    <item name="shapeAppearance">@style/ShapeAppearance.Material3.NavigationBarView.ActiveIndicator</item>
+    <item name="android:color">?attr/colorSecondaryContainer</item>
+    </style>-->
+    <style name="CustomBottomNavActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+    <style name="search_view_text_style">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#67686D</item>
+        <item name="android:fontWeight" tools:ignore="NewApi">400</item>
+    </style>
+
+    <style name="CustomImageViewRoundedBottom_16dp">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+        <item name="cornerSizeBottomLeft">16dp</item>
+    </style>
+
+    <style name="CustomImageViewRounded_16dp">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+</resources>
